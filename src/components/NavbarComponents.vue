@@ -1,0 +1,29 @@
+<script setup>
+import { Navbar, NavbarLogo, NavbarCollapse, NavbarLink } from 'flowbite-vue'
+</script>
+<template>
+    <Navbar>
+      <template #logo>
+        <NavbarLogo image-url="PICTURES/kopi2.jpg">
+          Coffe Shop 
+        </NavbarLogo>
+      </template>
+      <template #default="{isShowMenu}">
+        <NavbarCollapse :isShowMenu="isShowMenu">
+          <NavbarLink is-active>Home</NavbarLink>
+          <NavbarLink>Produk</NavbarLink>
+          <NavbarLink>Pricing</NavbarLink>
+          <NavbarLink>Contact</NavbarLink>
+        </NavbarCollapse>
+      </template>
+      <template #left-side>
+        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+      </template>
+    </Navbar>
+</template>
+
+<style>
+.Coffe-Shop{
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
